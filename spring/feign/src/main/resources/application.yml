@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: feign
+
+server:
+  port: 8085
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://192.168.0.71:8081/eureka/}
+    fetch-registry: true
+    register-with-eureka: true
+
+feign:
+  circuitbreaker:
+    enabled: true
+
+resilience4j:
+  timelimiter:
+    configs:
+      default:
+        timeoutDuration: 2s
+        cancelRunningFuture: true

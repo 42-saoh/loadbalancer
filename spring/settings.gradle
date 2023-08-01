@@ -1,0 +1,9 @@
+rootProject.name = 'webui'
+
+include 'front'
+include 'order'
+include 'eureka'
+include 'zuul'
+include 'feign'
+include 'pay1'
+include 'pay2'
